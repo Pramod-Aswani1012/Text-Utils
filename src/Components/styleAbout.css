@@ -1,0 +1,42 @@
+#abtlogo
+{
+    height: 70%;
+    width: 80px;
+    border-radius: 113px;
+    box-shadow: 8px 7px 39px 8px blue;
+    position: relative;
+    /* top: 10px; */
+    /* left: 100px; */
+    bottom: 10px;
+    width: 70%;
+}
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+}
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    /* background-color: #111; */
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    /* background-color: red; */
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* height: 100%; */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  

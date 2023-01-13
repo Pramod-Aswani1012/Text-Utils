@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route ,Navigate } from "react-router-dom";
 import Navbaar from "./Components/Navbaar.js";
 // import Switch from './Components/Switch';
 import Toupper from "./Components/Toupper";
@@ -10,7 +11,7 @@ import Services from "./Components/Services";
 import ContactUs from "./Components/ContactUs";
 
 
-
+  
 function App() {
   const [mode, setMode] = useState("white");
   // const[theme,setTheme] = useState('white');
@@ -27,22 +28,32 @@ function App() {
     }
   };
   // console.log('document.body.style.backgroundColor')
+
+
   return (
     <>
       <Router>
         <Navbaar mode={mode} toggleMode={toggleMode} />
+        <div className="container">
         <Routes>
+          <Route exact path="/" element={<Toupper mode={mode} />} />
           <Route exact path="/about" element={
           <About />
           } />
           <Route exact path="/contactus" element={<ContactUs />} />
-
+          <Route
+      path="*"
+      element={<Navigate to="/" />}
+    />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/" element={<Toupper mode={mode} />} />
         </Routes>
+        
+        {/* <Toupper mode={mode} /> */}
+        </div>
       </Router>
     </>
   );
 }
+
 
 export default App;

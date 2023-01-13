@@ -2,6 +2,8 @@ import './style.css'
 import { MDBSwitch } from 'mdb-react-ui-kit';
 import React from 'react'
 import {Link} from 'react-router-dom'
+import cbLogo from './logo512.png';
+// import { MDBCardImage } from 'mdb-react-ui-kit';
 
 export default function Navbaar(props) {
 
@@ -22,10 +24,10 @@ export default function Navbaar(props) {
 
   return (
     <div className="navbaar bg-wheat">
-      <li className="item" id='t'><Link to="/">Text Utils</Link></li>
+      <li className="item" id='t'><Link to="/"><img src={cbLogo} alt="logo" /></Link></li>
       <li className="item"><Link to="/">Home</Link></li>
-      <li className="item"><Link to="./about">About</Link></li>
-      <li className="item"><Link to="./services">Services</Link></li>
+      <li className="item"><Link to="/about">About</Link></li>
+      <li className="item"><Link to="/services">Services</Link></li>
       <li className="item"><Link to="/contactus">Contact US</Link></li>
       {/* <input type="checkbox" name="" id="" /> */}
       <div id="ThemeButtons">
