@@ -18,6 +18,7 @@
   font-size: 22px;
   font-weight: bold;
   margin: 10px;
+  cursor: pointer;
 }
 .bttn:hover
 {
@@ -61,4 +62,43 @@
 .themebtn
 {
   cursor: pointer;
+}
+
+@media only screen and (max-width:400px)
+{
+  textarea
+    {
+        height: 10em;
+        width: 15em;
+    }
+    .btns
+    {
+      position: relative;
+      z-index: -1;
+      left: 0px;
+      width: 100vw;
+        /* display: inline; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    .bttn
+    {
+      cursor: pointer;
+      /* position: relative; */
+      /* left: 100px; */
+      /* display: block; */
+      width: 150px;
+      height: 70px;
+      /* background-color: pink; */
+    }
+    #cpy
+    {
+      display: none;
+    }
+    #cptlise
+    {
+      position: relative;
+      bottom: 15px;
+    }
 }

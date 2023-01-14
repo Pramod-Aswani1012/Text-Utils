@@ -14,9 +14,21 @@ import ContactUs from "./Components/ContactUs";
   
 function App() {
   const [mode, setMode] = useState("white");
+  const[mobile,setMobile]=useState(false);
   // const[theme,setTheme] = useState('white');
 
   // const element = document.querySelector('')
+
+  const toggleMobile = ()=>{
+    if(mobile)
+    {
+      setMobile(false);
+    }
+    else
+    {
+      setMobile(true);
+    }
+  }
 
   const toggleMode = () => {
     if (mode === "white") {
@@ -33,7 +45,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbaar mode={mode} toggleMode={toggleMode} />
+        <Navbaar mode={mode} toggleMode={toggleMode} mobile={mobile} toggleMobile={toggleMobile}/>
         <div className="container">
         <Routes>
           <Route exact path="/" element={<Toupper mode={mode} />} />

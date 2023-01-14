@@ -10,7 +10,7 @@ export default function Toupper(props) {
         setText(event.target.value)
     }
 
-    const toupper = ()=>{
+    const toupper =()=>{
         let newtext=text.toUpperCase();
         setText(newtext)
     }
@@ -36,31 +36,6 @@ export default function Toupper(props) {
     tt=tt.slice(0,tt.length-1)
     setText(tt);
   }
-
-  // document.getElementById('container').style.display='block';
-  // document.getElementById('container').style.backgroundColor=document.body.style.backgroundColor;
-
-  // const EnableDark = ()=>{
-  //   let bd = document.getElementById('container');
-  //   let cnt = document.getElementById('dmmode');
-  //   let dm = document.getElementById('darkmode');
-  //   if(bd.style.backgroundColor==='white' )
-  //   {
-  //     bd.style.backgroundColor='black'
-  //     bd.style.color='white';
-  //     cnt.style.backgroundColor='black'
-  //     cnt.style.color='white';
-  //     dm.innerHTML="Enable Light Mode"
-  //   }
-  //   else
-  //   {
-  //     bd.style.backgroundColor='white'
-  //     bd.style.color='black';
-  //     cnt.style.backgroundColor='white'
-  //     cnt.style.color='black';
-  //     dm.innerHTML="Enable Dark Mode"
-  //   }
-  // }
     
   const tocopy = ()=>{
     let cp = document.getElementById("dmmode");
@@ -84,11 +59,11 @@ export default function Toupper(props) {
       <h1 style={{color: props.mode==='white'?'black':'white'}}>Enter your text here to analyze</h1>
       <textarea name="" id='dmmode' cols="80" rows="10" value={text} onChange={onch} style={{backgroundColor: props.mode==='white'?'white':'#1e1c1c', color: props.mode==='white'?'black':'white'}}></textarea>
       <div className="btns">
-      <button className="bttn" onClick={toupper}>Convert To Upper Case</button>
+      <button className="bttn"  onClick={toupper}>Convert To Upper Case</button>
       <button className="bttn" onClick={tolower}>Convert To Lower Case</button>
       <button className="bttn" onClick={toclear}>Clear Text</button>
-      <button className="bttn" onClick={tocopy}>Copy Text</button>
-      <button className="bttn" onClick={tocapitalise}>Capitalise First Letter of Each Word</button>
+      <button className="bttn" id='cpy' onClick={tocopy}>Copy Text</button>
+      <button className="bttn" id='cptlise' onClick={tocapitalise}>Capitalise Every Letter</button>
       {/* <button className="bttn" id='darkmode' >Enable Dark Mode</button> */}
       </div>
       <div className="textsummary" style={{color: props.mode==='white'?'black':'white'}}>

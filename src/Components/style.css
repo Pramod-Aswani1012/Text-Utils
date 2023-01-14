@@ -3,11 +3,22 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+.nav-links
+{
+    display: flex;
 }
 .navbaar
 {
     background-color: wheat;
-    display: flex;
+    height: 90px;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+#ThemeButtons
+{
+    padding: 24px 41px;
 }
 li
 {
@@ -15,9 +26,10 @@ li
 }
 .item 
 {
-    margin: 3px 20px;
+    margin: 16px 20px;
     padding: 10px 10px;
-    font-size: 23px;
+    font-size: 25px;
+    font-weight: bold;
 }
 li a
 {
@@ -72,4 +84,85 @@ img
 {
     height: 50px;
     width: 50px;
+}
+
+
+
+@media only screen and (max-width:400px)
+{
+    .mobile-menu-icon
+{
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+    body
+    {
+        background-color: aqua;
+        /* z-index: -1; */
+    }
+    h1
+    {
+        text-align: center;
+    }
+    .item
+    {
+        display: none;
+    }
+    .nav-links-mobile
+    {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: wheat;
+        opacity: 0.95;
+        /* left: 10px; */
+        /* top: 75px; */
+        transition: all 0.5s ease-out;
+        width: 100%;
+        height: 440px;
+        /* z-index: -1; */
+    }
+    .item
+    {
+        display: none;
+        color: white;
+        text-align: center;
+        padding: 2px;
+        width: 100%;
+        transition: all 0.5s ease-in;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-menu-icon
+    {
+        display: block;
+        position: relative;
+        font-size: 30px;
+        color: white;
+        background-color: #0082BC;
+        border: none;
+        outline: none;
+        top: 0px;
+        left: 87vw;
+        /* float: right; */
+        /* width: 100%; */
+        /* height: 10px; */
+    }
+    .nav-links
+    {
+        display: none;
+    }
+    .navbaar
+    {
+        background-color: aliceblue;
+        height: 41px;
+    }
+    #teme
+    {
+        display: flex;
+        justify-content: center;
+    }
 }
