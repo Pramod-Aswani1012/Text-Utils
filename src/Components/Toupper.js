@@ -59,7 +59,7 @@ export default function Toupper(props) {
       <h1 style={{color: props.mode==='white'?'black':'white'}}>Enter your text here to analyze</h1>
       <textarea name="" id='dmmode' cols="80" rows="10" value={text} onChange={onch} style={{backgroundColor: props.mode==='white'?'white':'#1e1c1c', color: props.mode==='white'?'black':'white'}}></textarea>
       <div className="btns">
-      <button className="bttn"  onClick={toupper}>Convert To Upper Case</button>
+      <button className="bttn"  onTouchStart={toupper}>Convert To Upper Case</button>
       <button className="bttn" onClick={tolower}>Convert To Lower Case</button>
       <button className="bttn" onClick={toclear}>Clear Text</button>
       <button className="bttn" id='cpy' onClick={tocopy}>Copy Text</button>
